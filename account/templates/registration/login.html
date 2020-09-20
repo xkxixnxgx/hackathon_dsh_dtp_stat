@@ -1,0 +1,15 @@
+
+<h1>Вход в систему </h1>
+{% if form.errors %}
+  <p>Введены некорректные данные. Повторите попытку входа</p>
+{% else %}
+  <p>Введите данные для входа в систему:</p>
+{% endif %}
+<div class="login-form">
+  <form action="{% url 'login' %}" method="post">
+  {{ form.as_p }}
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ next }}" />
+  <p><input type="submit" value="Log-in"></p>
+  </form>
+</div>
