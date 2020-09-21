@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     # project apps
     'account.apps.AccountConfig',
+    'collisions.apps.CollisionsConfig',
 ]
 
 MIDDLEWARE = [
