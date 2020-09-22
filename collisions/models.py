@@ -88,3 +88,10 @@ class Test(models.Model):
     first_name = models.CharField('Имя', max_length=10)
     last_name = models.CharField('Фамилия', max_length=10)
 
+
+class PlaceOfCollisions(models.Model):
+    """ модель места концентрации ДТП """
+    latitude = models.DecimalField('широтка центра места концентрации ДТП', max_digits=8)
+    longitude = models.DecimalField('долгота центра места концентрации ДТП', max_digits=8)
+    location = models.CharField('расположение город/вне города', max_length=50)
+
